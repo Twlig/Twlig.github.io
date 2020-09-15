@@ -29,7 +29,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://github.com/Twlig/picture/blob/master/github%E6%B3%A8%E5%86%8C%E5%BA%94%E7%94%A8.png?raw=true">
 <meta property="article:published_time" content="2020-09-15T10:28:26.000Z">
-<meta property="article:modified_time" content="2020-09-15T11:56:31.422Z">
+<meta property="article:modified_time" content="2020-09-15T12:00:32.582Z">
 <meta property="article:author" content="Twlig">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="gitalk">
@@ -178,7 +178,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-09-15 18:28:26 / Modified: 19:56:31" itemprop="dateCreated datePublished" datetime="2020-09-15T18:28:26+08:00">2020-09-15</time>
+              <time title="Created: 2020-09-15 18:28:26 / Modified: 20:00:32" itemprop="dateCreated datePublished" datetime="2020-09-15T18:28:26+08:00">2020-09-15</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -231,7 +231,7 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% elseif theme.gitalk.enable %&#125;</span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;gitalk-container&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="4、-config-yml"><a href="#4、-config-yml" class="headerlink" title="4、_config.yml"></a>4、_config.yml</h5><p>在 <code>themes/next/_config.yml</code> 文件中添加 <code>Gitalk</code> 的配置。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment"># 是否启用</span></span><br><span class="line">  <span class="attr">owner:</span> <span class="string">Jonzzs</span> <span class="comment"># 用户名</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">BlogComment</span> <span class="comment"># 存放评论的仓库名</span></span><br><span class="line">  <span class="attr">clientID:</span> <span class="string">刚刚新建应用的clientID</span> <span class="comment"># Github Application 的 clientID</span></span><br><span class="line">  <span class="attr">clientSecret:</span> <span class="string">刚刚新建应用的clientSecret</span> <span class="comment"># Github Application 的 clientSecret</span></span><br><span class="line">  <span class="attr">admin:</span> <span class="string">Jonzzs</span> <span class="comment"># 用户名</span></span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">false</span> <span class="comment"># 评论时遮照效果的开关</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">gitalk:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment"># 是否启用</span></span><br><span class="line">  <span class="attr">owner:</span> <span class="string">Twilg</span> <span class="comment"># 用户名</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">blog_Comments</span> <span class="comment"># 存放评论的仓库名</span></span><br><span class="line">  <span class="attr">clientID:</span> <span class="string">刚刚新建应用的clientID</span> <span class="comment"># Github Application 的 clientID</span></span><br><span class="line">  <span class="attr">clientSecret:</span> <span class="string">刚刚新建应用的clientSecret</span> <span class="comment"># Github Application 的 clientSecret</span></span><br><span class="line">  <span class="attr">admin:</span> <span class="string">Twilg</span> <span class="comment"># 用户名</span></span><br><span class="line">  <span class="attr">distractionFreeMode:</span> <span class="literal">false</span> <span class="comment"># 评论时遮照效果的开关</span></span><br></pre></td></tr></table></figure>
 
 <p>最后，清理一下缓存，生成一下静态文件，部署一下服务器就好啦。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
