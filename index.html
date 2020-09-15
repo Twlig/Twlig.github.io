@@ -1,406 +1,457 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="Twlig">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.1.1"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hexo使用心得以及markdown编辑器" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/15/hexo%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97%E4%BB%A5%E5%8F%8Amarkdown%E7%BC%96%E8%BE%91%E5%99%A8/" class="article-date">
-  <time datetime="2020-09-15T06:04:21.000Z" itemprop="datePublished">2020-09-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/15/hexo%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97%E4%BB%A5%E5%8F%8Amarkdown%E7%BC%96%E8%BE%91%E5%99%A8/">hexo使用心得以及markdown编辑器</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>吃完饭回来的我又回来啦，继续编辑我的搭建博客记录，上一回咱们讲到hexo搭建，那搭建好了框架，肯定就要用呀。咋用呀？不会！看官方文档呀！啥？太多了，懒得看！行吧，我来给你划重点，看完我的文章包教会！</p>
-<h3 id="hexo文件目录"><a href="#hexo文件目录" class="headerlink" title="hexo文件目录"></a>hexo文件目录</h3><p>hexo的目录就是下面这个亚子的。</p>
-<p><img src="https://github.com/Twlig/picture/blob/master/QQ%E6%88%AA%E5%9B%BE20200915151606.png?raw=true" alt="hexo文件目录"></p>
-<p>node_modules应该是hexo的依赖库啥的。</p>
-<p>picture忽略不计，这是我自己用来上传图片的git仓库。晚点再唠一下这个图片上传的问题。</p>
-<p>public就是部署之后会自动上传到用户名命名的那个远程git仓库的静态网页。</p>
-<p>.deploy_git应该是和github远程仓库连接的本地仓库，当执行部署命令时，就会自动把public文件的东西推送到远程仓库，就达到了更新的目的。</p>
-<p>scaffolds就是一些markdown模板，你可以在新建文章的时候使用这里面的模板，更加快捷的写文章。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new photo &quot;王小花自传&quot;</span><br></pre></td></tr></table></figure>
-
-<p>就像上面这个写，hexo就会去scaffolds中找到photo文件，然后以这个为模板生成你的新文章。</p>
-<p>source就是你写的文章的存放地，你的post文章，page文章，还有草稿draft文章。</p>
-<p>themes就是主题，你可以在_config.yml中修改你的主题。这里有很多主题可以<a target="_blank" rel="noopener" href="http://jekyllthemes.org/">下载</a>。下载之后解压放到到hexo文件目录的themes文件夹中。找到theme字段，填写你想要的主题文件名。</p>
-<p>_config.yml文件就是配置文件，各种参数都可以在里面修改。想要具体了解可以看官网<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/configuration">参数</a>。</p>
-<h3 id="hexo常用的命令"><a href="#hexo常用的命令" class="headerlink" title="hexo常用的命令"></a>hexo常用的命令</h3><h4 id="init"><a href="#init" class="headerlink" title="init"></a>init</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<p>就是初始化王小花的文件夹，表示你王小花从今以后要在这个文件夹下面用hexo写自己的博客了</p>
-<h4 id="new"><a href="#new" class="headerlink" title="new"></a>new</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>这个命令嘛，就是新建你自己的文章呀。至于layout是个啥，就是你新文章的布局，有三种：post、page、draft。生成的文件分别在source/_post，source和source/_draft下。其中呢，post就是你部署上服务器之后会显示在网页上的文章，如果你不写明layout默认也是这个类型的，而page呢，我的理解是用来做分类和标签页的东西，最后的draft就是你王小花不想被别人看到的草稿，你也可以选择优化好文章之后，使用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish &lt;title&gt;</span><br></pre></td></tr></table></figure>
-
-<p>比如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo publish “王小花为何那样”</span><br></pre></td></tr></table></figure>
-
-<p>这个“王小花为何那样”呢，就是title啦，title就是你文章的标题</p>
-<h4 id="server"><a href="#server" class="headerlink" title="server"></a>server</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server  </span><br></pre></td></tr></table></figure>
-
-<p>启动服务器，就是在你的localhost:4000端口可以访问的那种，比如，王小花在写文档的时候，她觉得她写的好挫，布局太丑了，表达没有很清楚，但是她又想要看看到底丑成个啥样子，那她就可以开她的服务器，在本地自己好好瞅瞅哪不行！具体就是这样操作，hexo新建一个文章，打开文章的md文件，用markdown编辑器编辑的同时，开启hexo服务器，写了一小点，想看看自己的成果，那就crtl+s，然后浏览器访问本地localhost:4000，你就可以实时看到你的文章。</p>
-<h4 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo g &#x2F;&#x2F;简写也可</span><br></pre></td></tr></table></figure>
-
-<p>这个命令是用来生成静态文件的，官网是这么说的，我猜是生成静态文件保存到public文件夹里面，至于为啥我没有hexo g我也可以在本地看到实时的结果，问就是不知道，我的小脑袋瓜子还没想明白。顺便小声逼逼一下，我想做大佬的小娇妻，哪位大佬可以l带带我，自学实在是太孤独了。</p>
-<h4 id="deploy"><a href="#deploy" class="headerlink" title="deploy"></a>deploy</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br><span class="line">hexo d &#x2F;&#x2F;简写</span><br></pre></td></tr></table></figure>
-
-<p>这个命令就像它的长相一样，就是部署到服务器上去。</p>
-<h4 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
-
-<p>除缓存文件 (<code>db.json</code>) 和已生成的静态文件 (<code>public</code>)。</p>
-<p>在某些情况（尤其是更换主题后），如果发现对站点的更改无论如何也不生效，执行clean清楚缓存。</p>
-<p>差不多也就这些命令了，你就可以把hexo用的七七八八了。</p>
-<h3 id="markdown图片显示问题"><a href="#markdown图片显示问题" class="headerlink" title="markdown图片显示问题"></a>markdown图片显示问题</h3><p>前面在hexo文件目录的时候讲到了我的picture文件夹，这个是我新建的git仓库，主要是用来存放我的博客图片。因为你在markdown里面放置图片的时候，你直接从本地托图片过去，图片的路径是本地图片路径，你在本地看肯定没问题，可以显示出来。但是要放在服务器上就显示不了了，服务器又无法识别你的本地地址。因此，我们需要把图片专门新建一个仓库来管理，需要的图片就放进去。这个仓库要和远程github仓库连接，把本地的图片上传到远程，然后我们打开远程仓库的对应图片时，右键选择复制地址。把这个地址填在markdown图片地址里面就可以了。这时，服务器加载图片的时候就会去你的github图片仓库里面找了。</p>
-<h3 id="markdown编辑器"><a href="#markdown编辑器" class="headerlink" title="markdown编辑器"></a>markdown编辑器</h3><p>我比较推荐的是typora这个是真的好用。这是下载<a target="_blank" rel="noopener" href="https://www.typora.io/">地址</a>。在这里我还是想感谢一个人，他还是教会我蛮多东西的。如果你能看到的话，真心的谢谢你呀。</p>
-<p>至于markdown语法部分，这不是要用再学嘛，随便找一个<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/191d1e21f7ed/">语法教程</a>。而且typora其实都可以在段落和编辑里面找到现成的，哪里需要点哪里。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/15/hexo%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97%E4%BB%A5%E5%8F%8Amarkdown%E7%BC%96%E8%BE%91%E5%99%A8/" data-id="ckf3kgdyj0000a8ut6o4k9w7z" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/typora/" rel="tag">typora</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
+<link rel="canonical" href="http://example.com/">
 
 
-  
-    <article id="post-Hexo搭建博客记录" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/15/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/" class="article-date">
-  <time datetime="2020-09-15T03:19:35.000Z" itemprop="datePublished">2020-09-15</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-  </div>
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/15/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/">Hexo搭建博客记录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>博客是用来记录学习过程的好工具，可以对整个的学习做系统的梳理，方便以后回顾学习知识更加高效。Hexo+GitHub搭建博客是免费的，不需要服务器，正所谓便宜大碗好用，薅羊毛怎么能少得了我。果断学习搭建教程。</p>
-<h2 id="搭建过程需使用的工具"><a href="#搭建过程需使用的工具" class="headerlink" title="搭建过程需使用的工具"></a>搭建过程需使用的工具</h2><p>1、git</p>
-<p>2、GitHub</p>
-<p>3、node</p>
-<p>4、hexo</p>
-<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><p>这是git下载链接<a target="_blank" rel="noopener" href="https://git-scm.com/downloads">git下载</a></p>
-<h3 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h3><p>注册GitHub账号，<a target="_blank" rel="noopener" href="https://github.com/">GitHub官网</a></p>
-<p>下载并安装好git之后，在GitHub注册账号，然后打开git bash，全局配置用户名和邮箱</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的用户名&quot;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-
-<p>生成ssh key</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;你的邮箱&quot;</span><br></pre></td></tr></table></figure>
-
-<p>在git bash执行这个命令之后就会在你的系统盘生成密钥对，一个公钥一个私钥。然后再到你的GitHub上点击个人头像点击settings找到SSH and GPG keys，添加公钥，把系统盘的公钥添加进去。这样你的git就连接到了你的GitHub，当你想要连接GitHub的远程仓库，把你电脑上的本地仓库的东西推送到远程仓库就可以轻松实现，在这里公私钥对就是对你的个人身份进行验证，因为你的GitHub有你的公钥，当你在本地电脑用git推送信息到GitHub远程仓库时，会对信息用私钥签名加密，然后GitHub就从你的SSH中找到你的公钥对信息进行解密，如果可以解出来那就说明身份无误。</p>
-<p>接着，在GitHub新建一个repository，命名一定要严格按照</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">你的GitHub账户名.github.io</span><br></pre></td></tr></table></figure>
-
-<p>这种格式来，GitHub对这种格式的仓库可以直接用域名访问，浏览器输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的GitHub账户名.github.io</span><br></pre></td></tr></table></figure>
-
-<p>你就可以看到你的博客页面</p>
-<h3 id="node"><a href="#node" class="headerlink" title="node"></a>node</h3><p>node安装<a target="_blank" rel="noopener" href="https://nodejs.org/en/">地址</a></p>
-<p>我目前对于node的理解还处在于包管理工具的阶段，没有深入的接触，只是觉得使用npm下载各种数据包之类的超级方便一个命令行就轻松搞定了。这里我也是采用node来安装hexo。</p>
-<h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><p>hexo他有官方的文档写的超级详细，<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">附链接</a></p>
-<p>全局安装hexo</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>使用hexo初始化一个文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init 文件名</span><br></pre></td></tr></table></figure>
-
-<p>到文件目录中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd 文件名</span><br></pre></td></tr></table></figure>
-
-<p>使用npm安装依赖</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-
-<p>使用hexo-deployer-git一键部署，这个在官方文档有专门的栏目讲到了。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>修改_config.yml文件，该文件是配置文件，很多东西都可以在这里修改，如主题，根目录之类的</p>
-<p><img src="https://github.com/Twlig/picture/blob/master/deploy%E5%9C%B0%E5%9D%80.png?raw=true" alt="deploy地址"></p>
-<p>把repo的值改成自己对应的仓库地址。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo -g</span><br><span class="line">hexo -d</span><br></pre></td></tr></table></figure>
-
-<p>就可以生产静态文件，并部署网站，部署之后你就可以在以下网址中访问你的服务器啦。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;你的GitHub账户名.github.io</span><br></pre></td></tr></table></figure>
-
-<p>我要吃饭去了，不写了，等我晚点再补一下hexo写作和markdown的文章。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/15/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/" data-id="ckf3e1dtg0000osut5edigapd" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/14/hello-world/" class="article-date">
-  <time datetime="2020-09-14T04:54:01.536Z" itemprop="datePublished">2020-09-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/09/14/hello-world/" data-id="ckf226eth00004gutfxunfpax" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
+  <title>Hexo</title>
   
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li></ul>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
+  <div class="site-meta">
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typora/" rel="tag">typora</a></li></ul>
-    </div>
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Hexo</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
   </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/typora/" style="font-size: 10px;">typora</a>
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
     </div>
   </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
-    </div>
-  </div>
+</div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/09/15/hexo%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97%E4%BB%A5%E5%8F%8Amarkdown%E7%BC%96%E8%BE%91%E5%99%A8/">hexo使用心得以及markdown编辑器</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/15/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/">Hexo搭建博客记录</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/14/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
 </nav>
+
+
+
+
+</div>
+    </header>
+
     
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
   </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/15/hexo%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97%E4%BB%A5%E5%8F%8Amarkdown%E7%BC%96%E8%BE%91%E5%99%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Twlig">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/15/hexo%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97%E4%BB%A5%E5%8F%8Amarkdown%E7%BC%96%E8%BE%91%E5%99%A8/" class="post-title-link" itemprop="url">hexo使用心得以及markdown编辑器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-09-15 14:04:21 / Modified: 16:58:03" itemprop="dateCreated datePublished" datetime="2020-09-15T14:04:21+08:00">2020-09-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>hexo使用方法以及markdown编辑器</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/09/15/hexo%E4%BD%BF%E7%94%A8%E5%BF%83%E5%BE%97%E4%BB%A5%E5%8F%8Amarkdown%E7%BC%96%E8%BE%91%E5%99%A8/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/15/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Twlig">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/09/15/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/" class="post-title-link" itemprop="url">Hexo搭建博客记录</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-09-15 11:19:35" itemprop="dateCreated datePublished" datetime="2020-09-15T11:19:35+08:00">2020-09-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>hexo+GitHub搭建博客记录</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/09/15/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AE%B0%E5%BD%95/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Twlig</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Twlig</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
 </body>
 </html>
