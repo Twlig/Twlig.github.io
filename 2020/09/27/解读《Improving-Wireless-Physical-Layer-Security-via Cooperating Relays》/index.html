@@ -20,15 +20,21 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/categories/NFC/index.html">
+  <meta name="description" content="介绍该文章的主要思想">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Improving Wireless Physical Layer Security via Cooperating Relays》">
+<meta property="og:url" content="http://example.com/2020/09/27/%E8%A7%A3%E8%AF%BB%E3%80%8AImproving-Wireless-Physical-Layer-Security-via%20Cooperating%20Relays%E3%80%8B/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="介绍该文章的主要思想">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-27T10:42:53.000Z">
+<meta property="article:modified_time" content="2020-09-27T13:28:54.872Z">
 <meta property="article:author" content="Twlig">
+<meta property="article:tag" content="PLS">
+<meta property="article:tag" content="论文">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/categories/NFC/">
+<link rel="canonical" href="http://example.com/2020/09/27/%E8%A7%A3%E8%AF%BB%E3%80%8AImproving-Wireless-Physical-Layer-Security-via%20Cooperating%20Relays%E3%80%8B/">
 
 
 <script id="page-configurations">
@@ -36,12 +42,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'en'
   };
 </script>
 
-  <title>Category: NFC | Hexo</title>
+  <title>《Improving Wireless Physical Layer Security via Cooperating Relays》 | Hexo</title>
   
 
 
@@ -139,57 +145,102 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">NFC
-          <small>Category</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2020/09/27/%E8%A7%A3%E8%AF%BB%E3%80%8AImproving-Wireless-Physical-Layer-Security-via%20Cooperating%20Relays%E3%80%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Twlig">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          《Improving Wireless Physical Layer Security via Cooperating Relays》
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2020-09-27 18:42:53 / Modified: 21:28:54" itemprop="dateCreated datePublished" datetime="2020-09-27T18:42:53+08:00">2020-09-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/PLS/" itemprop="url" rel="index"><span itemprop="name">PLS</span></a>
+                </span>
+            </span>
+
+          
+            <div class="post-description">介绍该文章的主要思想</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+        <p>为了保证网络通信之间的保密通信，防止窃听者获取有效信息，在网络体系结构中上层往往会使用复杂的加密算法对信息进行加密。然而在无线通信的抽象物理层安全方法可以在没有上层数据加密的情况下防止窃听。在理层安全是比上层安全协议更加高效便捷的解决办法。</p>
+<p>然而由于无线信道条件的限制，通常只有在源-目标信道由于源-窃听者信道时才可行。在本论文中，就是通过中继协作来克服信道条件限制。作者讨论了在一个或者多个窃听者存在的情况下，利用多个协作中继来实现源-目标的安全通信。考虑了三种协方案：解码转发（DF），放大转发（AF）和协作干扰（CJ）。DF是对收到的源发送信号进行重新编码（和源不同的编码方式），然后再发送给目标；AF是对收到的源信号进行放大转发（但是由于信号是从源传过来的，肯定会有噪声，因此，对噪声也是加大了的）；CJ是在源发送消息的同时发送干扰信号。其实这么做的原因就是对主信道（源-目标）进行信道加强，解决了复杂信道环境所带来的信道衰弱问题，对源-窃听信道加大信噪比，使得窃听信道没办法从收集到的信息中获取有用信息，因为噪声太大了。</p>
+<p><strong>保密率</strong>：信息从源秘密传输到目标的速率，称为可达保密率。最大可达保密率成为保密能力。</p>
+<p><strong>保密能力</strong>：<br>$$<br>max[I(X,Y)-I(X,Z)]<br>$$<br>其中，I(X,Y)是源-目标每秒彼此间的信息，I(X,Z)是源和窃听者每秒彼此间的信息。</p>
+<p>也就是说让窃听者得到的信息尽可能的小，保密能力就能增加。如果窃听者的信道比源-目标信道的好，则保密率为0。其实可以这样理解，让源每秒发送的消息尽可能小的时候，由于信道传输有噪声，那么目标接受到的有用信息就会小，小到一定程度就不能识别。那试想，如果源每秒发送的数据量很多，那么信噪比还是很大，接受到的信息就还是可以识别出有用信息，那这时可能窃听者和目标都可以识别出来，这不行；当源每秒发送的消息少到一定程度，由于信噪比小，窃听者和目标都识别不出来，这样也是不行的。那么就是要使用一种速率使得目标可以识别，窃听者无法识别。</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-09-17T20:37:26+08:00"
-              content="2020-09-17">
-          09-17
-        </time>
-      </div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/PLS/" rel="tag"># PLS</a>
+              <a href="/tags/%E8%AE%BA%E6%96%87/" rel="tag"># 论文</a>
+          </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/09/17/NFC%E6%A8%A1%E5%BC%8F%E4%BB%A5%E5%8F%8ANFC%E8%8C%83%E5%9B%B4%E6%94%BB%E5%87%BB/" itemprop="url">
-            <span itemprop="name">NFC模式以及NFC范围攻击</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/09/24/%E6%96%B0%E6%89%8B%E8%AF%BB%E8%AE%BA%E6%96%87%E7%9A%84%E6%96%B9%E6%B3%95/" rel="prev" title="新手读论文的方法">
+      <i class="fa fa-chevron-left"></i> 新手读论文的方法
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
   </article>
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -366,6 +417,25 @@ NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'fce4b056a5fd9473f926',
+      clientSecret: 'c11391db76a7d0cda4b7f0606a4da3fc606bc9e0',
+      repo        : 'blog_comments',
+      owner       : 'Twlig',
+      admin       : ['Twlig'],
+      id          : '04325b09a60587b247efc41672fe8a94',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
